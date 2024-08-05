@@ -3,7 +3,7 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - Sorts a doubly linked list of integers in 
+ * insertion_sort_list - Sorts a doubly linked list of integers in
  * ascending order using Insertion sort
  * @list: Pointer to a pointer to the head of the list
  */
@@ -30,7 +30,7 @@ void insertion_sort_list(listint_t **list)
 				key_node->next->prev = temp;
 
 			key_node->prev = temp->prev;
-			key_node->next =temp;
+			key_node->next = temp;
 			temp->prev = key_node;
 
 			if (key_node->prev != NULL)
