@@ -17,8 +17,6 @@ static size_t partition(int *array, size_t low, size_t high, size_t size)
 	size_t start_index = low;
 	size_t current_index = low;
 
-	(void)size;
-
 	for (current_index = low; current_index < high; current_index++)
 	{
 		if (array[current_index] < pivot)
@@ -42,7 +40,7 @@ static size_t partition(int *array, size_t low, size_t high, size_t size)
 		array[high] = temp;
 	}
 
-	/* print array after completing partition step */
+	print_array(array, size);
 
 	return (start_index);
 }
