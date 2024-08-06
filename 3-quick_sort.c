@@ -27,6 +27,7 @@ static size_t partition(int *array, size_t low, size_t high, size_t size)
 				int temp = array[start_index];
 				array[start_index] = array[current_index];
 				array[current_index] = temp;
+				print_array(array, size);
 			}
 			start_index++;
 		}
@@ -38,9 +39,8 @@ static size_t partition(int *array, size_t low, size_t high, size_t size)
 		int temp = array[start_index];
 		array[start_index] = array[high];
 		array[high] = temp;
+		print_array(array, size);
 	}
-
-	print_array(array, size);
 
 	return (start_index);
 }
